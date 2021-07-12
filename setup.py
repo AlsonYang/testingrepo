@@ -1,11 +1,9 @@
-"""A setuptools based setup module for alsontest"""
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 from codecs import open
 from os import path
 from setuptools import setup, find_packages
-
 import versioneer
 
 here = path.abspath(path.dirname(__file__))
@@ -19,6 +17,7 @@ with open(path.join(here, 'HISTORY.rst'), encoding='utf-8') as history_file:
 requirements = [
     # TODO: put package requirements here
     'click',
+    'pandas'
 ]
 
 test_requirements = [
@@ -38,6 +37,7 @@ setup(
     entry_points={
         'console_scripts':[
             'testingrepo=alson_pkg_dir.cli:cli',
+            'makefile=alson_pkg_dir.cli:create'
             ],
         },
     include_package_data=True,
@@ -48,12 +48,12 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        # "Programming Language :: Python :: 2",
+        # 'Programming Language :: Python :: 2.7',
+        # 'Programming Language :: Python :: 3',
+        # 'Programming Language :: Python :: 3.3',
+        # 'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.9',
     ],
     test_suite='tests',
     tests_require=test_requirements,
