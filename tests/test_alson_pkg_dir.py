@@ -23,9 +23,9 @@ class TestAlson_pkg_dir(unittest.TestCase):
         assert(alson_pkg_dir.__version__)
         assert(alson_pkg_dir.cli() == self.cli_result)
 
-    def test_file_exist(self):
-        alson_pkg_dir.create()
-        assert os.path.isfile('./data/test.csv')
+    # def test_file_exist(self):
+    #     alson_pkg_dir.create()
+    #     assert os.path.isfile('./data/test.csv')
 
     def tearDown(self):
         pass
